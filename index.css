@@ -1,0 +1,83 @@
+body {
+  margin: 0px;
+}
+
+body::after {
+  content: "";
+  background-image: url(assets/clothes-in-closet.jpg);
+  background-size: cover;
+  background-position: fixed;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+.main_container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 75px;
+  width: 100%;
+  background-color: #83CBEB;
+  position: fixed;
+}
+
+.section_1 {
+  display: flex;
+  font-size: 20pt;
+  font-weight: bold;
+  font-family: monospace;
+  text-shadow: grey 1px 0 10px;
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.1em solid black; /* Cursor */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation: 
+    typing 1.2s steps(6, end),
+    blinking-cursor .75s step-end infinite;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+  from { width: 75% }
+  to { width: 100% }
+}
+
+@keyframes delete {
+  from { width: 100% }
+  to { width: 0 }
+}
+
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+.arrow {
+  display: flex;
+}
+
+#write {
+  position: absolute;
+}
+
+#more {
+  display: flex;
+  height: 95px;
+  margin-top: 600px !important;
+  margin-bottom: 0px !important;
+}
+
